@@ -42,6 +42,10 @@
             정렬 하지만 가독성을 헤치는 경우도 있다 
             word-break: break-all;  
             문단이 이상해졌을때 사용 */
+            /*line-height: 1.4;
+            letter-spacing : 10px;
+            text-align : center;*/
+            text-indent: 1em; /* 들여쓰기 */
         }
 
         .black-han-sans { 
@@ -61,10 +65,22 @@
             font-size : 0.5em;
             vertical-align: top;
         }
+
+        .box {
+            background: salmon;
+            width : 100px;
+            height : 100px;
+            line-height : 100px;
+            text-align : center;
+            color : #fff;
+        }
     </style>
 </head>
 
 <body>
+    <div class="box">
+        안녕
+    </div>
     <p class="va">안녕하세요 <strong>반갑습니다</strong></p>
     <p class="pt-b">안녕하세요</p>
     <p class="pt-b">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam fugiat quas sequi quasi consequuntur harum delectus, est doloremque minima vel nisi velit laudantium molestias eveniet porro error sapiente saepe consectetur.</p>
