@@ -1,0 +1,56 @@
+body {
+    background: rosybrown;
+}
+
+h2,
+p {
+    margin : 0;
+}
+.card-item a {
+    text-decoration: none; /* 하이퍼링크 처리된 글 효과 없애기*/
+    color : #29363d;
+    /* 컬러값은 디자이너가 정해둔 색으로 해봤다..*/
+    display: block;
+    width: 288px;
+    background: #fff;
+    box-shadow: 0px 3px 10px 0.2px rgba(0,0,0,1);
+    border-radius: 8px;
+    overflow: hidden;/* 박스를 벗어났을때 감춤 처리를 하겠다. */
+}
+.card-item img {
+    width: 100%;
+    aspect-ratio: 288/196; /*비율 맞추기*/
+    object-fit : cover; /* 찌그러진 사진 방지*/
+    vertical-align: top;
+}
+
+.card-content {
+    padding: 24px 16px 16px; /*패딩 시계방향*/
+}
+
+.card-content .title {
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* .title + p 로 안 잡은이유 협업에 있어서 title 이 중복될 수도 있어서 구체적으로 작성*/
+.card-content .title + p {
+    font-size : 12px;
+    color:#5a6a72;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+    margin: 12px 0 16px;
+    line-height: 20px; /* 줄 상하 간격*/
+}
+
+.underline {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left : 6px;
+}
