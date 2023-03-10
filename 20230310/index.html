@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascading</title>
+    <style>
+        /*Cascading Style Sheet*/
+
+        body h1.wow.wow2:hover {  /*[CSS] 가상 선택자(Pseudo selector)*/
+            background-color: red;
+        }
+
+        body h1.wow.wow2 {
+            background-color: orange;
+        }
+
+        body h1.wow.wow.wow.wow {
+            background-color: brown;
+        }
+
+        body h1.wow2 {
+            background-color: blue;
+        }
+
+        .wow {
+            background-color: purple;
+        }
+
+        h1{
+            background-color: aqua;
+        }
+        /* !improtant 노래방 우선순위 예약 */
+        
+        #wow {
+
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="wow" style="background-color : purple"class="wow wow2">Do My Best</h1>
+    
+</body>
+</html>

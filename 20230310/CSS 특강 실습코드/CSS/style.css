@@ -1,0 +1,161 @@
+/* 자로 풀이하면, 요리(料理)는 料(헤아릴 요)와 理(다스릴 리)고 조리(調理)는 調(고를 조)와 理(다스릴 리) 조리하지말고 요리하자 css를 */
+
+h1, h2, ul, p {
+    margin: initial;
+    padding: initial; /*프로퍼티를 초기화 한다는걸 명시적으로 써둔 것*/
+}
+
+/*
+* {
+    margin: 0;
+    padding: 0;
+}
+*/
+
+li{
+    list-style-type: none;
+}
+
+img {
+    vertical-align: top; /* 사진 밑에 여백 없애기 */
+}
+
+/*
+:root {
+    direction: rtl; 
+}
+*/
+
+
+body{
+    background-color: #ddd;
+}
+.wrapper { /* 타입 셀렉터 */
+    background-color: #ddd;
+    width: 800px;
+    margin: 40px auto;
+    border: 10px solid red;
+    text-align: center; /* 래퍼 안에있는 인라인 들이 중간으로옴*/
+}
+
+/*
+오.지원 {  성이 오 씨면서 지원인 사람을 선택  오가 없으면 *가 있다는것.(애스터 리스크 Universal Selectro 전체 선택자)
+    css지식 : 9999;
+}
+*/
+
+.header {
+    background-image: url(../images/cover03.png);
+    /*
+    ../는 상위 디렉토리를 의미합니다. 따라서 url(../images/cover03.png)는 "CSS" 폴더의 상위 폴더인 루트 폴더에서 "images/cover03.png" 파일을 찾으라는 의미가 됩니다. 이렇게 경로를 지정해주면 이미지 파일이 올바르게 로드되어 배경 이미지로 적용됩니다.
+    */
+    background-size: cover;
+    color: white; /* 컬러도 디폴트 값이 있음*/
+    padding: 100px; /* 상하단 패딩을 줘서 자연스럽게 공간이 생기게함 */
+    color : white;
+}
+
+.header img.profile { /* 정리 차원에서 이렇게 작성하기도 한다 ((명시적인 관리))*/
+    border: 8px solid white;
+    width: 150px;
+    border-radius: 0 40px 40px 0;
+}
+
+.header h1 { /*descendant combinator 하위 셀렉터,자손 셀렉터*/ 
+    /* box-shadow: inset 0 0 10px lime; */
+    /*inset이 안쪽 그림자기 때문에 영역을 확인을 할땐 inset을 사용하는게 좋다*/
+    /* height:inherit;  상속이 지원되지 않아도 강제로 부모속성을 상속받는다. */
+    border-bottom: 4px solid currentColor;
+    width: 200px;
+    margin: 30px auto; /* 상하단 30px 좌우 auto */
+}
+
+/* .header h1::before {
+    content: ' ';
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    background-color: currentColor;
+} */
+
+.header p {
+    /* box-shadow: inset 0 0 10px cyan; */
+}
+
+.contents {
+text-align : left; /* 상속을 안 받고 싶어!*/
+}
+
+.section { /* 레이아웃 부터 만들자 */
+    background-color: white;
+    margin: 30px;
+    padding: 30px;
+    background-image: url(../images/icon-information.png);
+    background-repeat: no-repeat;
+    background-position: right 40px center;
+}
+
+.skills { 
+    background-image: url(../images/icon-skills.png);
+}
+
+.section h2 {
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #f4f4f4;
+}
+
+/* section {
+    background-color: orange;
+    width: 400px;
+    margin: 0 auto;
+    중앙으로 가는코드
+} */
+
+
+   /*   property     : value*/
+   /* width-auto 기본적으로 세팅돼있는 width 값*/
+   /* property는 우리가 직접 지정하지 않아도 기본적인 세팅값이(initial value:초기값) 정해져있다 */
+   /* ex) background-color : transparent */
+   /* initial value 란 공기같은 존재임 브라우저가 하는일도 아닌 css개발자들이 정해놓은 것*/
+   /*     backgorund-image : none */
+
+   /*  "viewport"란 브라우저에서 현재 보이는 영역을 말함 이는 모바일 디바이스의 경우 화면 크기에 따라 다르게 결정되며, 데스크탑 브라우저에서는 브라우저 창의 크기와 같다. 따라서 "전체적인 화면"이라고 이해하기보다는, 현재 보이는 영역이라는 것을 명확하게 이해하는 것이 좋습니다.*/
+
+   /* width를 안줬을때 초기값은 어떻게 결정되는걸까? */
+
+   /* initial value , containing block 중요한 키워드 */
+   /* width auto랑 100% 차이는 auto는 여러 프로퍼티(margin) 등을 고려해서 계산해준다.
+      width: 100% 부모가 제공하는 컨텐츠영역을 가져오는건 맞지만 계산은 안 해줌 */
+
+    /*div는 블럭 요소기 때문에 좌우를 공유할 수 없다. 블럭레벨에 엘리먼트는 한줄을 전부 차지함*/
+    /*  width: auto는 그 사용가능한 오른쪽 공간여백을 다 사용하는거고 400px등 명시를해주면 그 공간을 그만큼 썼다는것 */
+
+    /* auto란 개념을 이해하자. margin: 0 auto margin-left: auto*/
+    /*인라인 엘리먼트란? */
+
+    /* h1이 정렬되는것이 아닌 그 안에 있는 인라인 텍스트가 정렬되는것.*/
+
+    /* reset.css 를 안 쓰는 이유는 쓰면 우리가 발견할 수 없으니까 기초를 다질 수 없으니까.*/
+
+    /*
+                    작업순서
+    1. 일단 내가 만들려고 하는 디자인을 확인하고 최소한의 마크업으로 시작한다.
+    2. hieght 값은 참고 덩어리를 나누고 백그라운드 컬러 혹은 박스 쉐도우를 줘본다.
+    3. css 들어가기전에 디폴트 css값을 초기화 해줄걸 생각하고 해준다.
+    4. css 타이포그래피가 가장 구체적인 묘사라고 생각한다.
+    
+    1. 레이아웃 만들기
+    2. 마크업 추가하기
+    3. h2랑 ul li속성 초기화 재료손질이 끝나고 다음 작업을 고민하자
+    */
+
+    /* 디자인 책 추천 해커를 위한 디자인 레슨: 디자인을 이해하는 공학적 사고방식*/
+
+    /* 상속받은 값들은 개발자모드로 확인할 수 있음*/
+
+    /* 타입셀렉터는 리셋해줄때나 사용하자,,*/
+    /* 마진 병합 현상은 충분히 의도된 동작이다 ((상하단만 겹치고 좌우는 안 겹친다))*/
